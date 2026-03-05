@@ -1,62 +1,64 @@
 ---
-title: Melee Threshold Abilities
-description: Powerful abilities that cost 15% adrenaline
+title: Melee Enhanced Abilities
+description: Powerful abilities that consume Bloodlust stacks for bonus effects
 ---
+
+<style>
+{`
+  .ability-page h3 + p {
+    margin-top: 0.25rem;
+  }
+`}
+</style>
+
+<div className="ability-page">
 
 ## Overview
 
-Similar to the amount of basic abilities, Melee also has a large amount of thresholds compared to other styles. These vary massively in damage and situational usefulness.
+Enhanced abilities are powerful attacks that can consume **4 Bloodlust stacks** for additional effects. These replace the old threshold system and no longer cost adrenaline to use.
 
-As covered in [Combat Basics](/getting-started/combat-basics), all of these thresholds will require **50%** adrenaline to cast, and will cost **15%** adrenaline.
+---
 
 ## Channelled Abilities
 
-All abilities in this section are Channelled Abilities. This means they must be cast for longer than a **Global Cooldown (1.8s)** to deal their full damage. Remember to watch your channel bar mentioned in the [Buff Bar](/setup/buff-bar) section. Players **can** move during melee channelled abilities, as long as they remain within **attack range** of their target.
+All abilities in this section are Channelled Abilities. Players **can** move during melee channelled abilities, as long as they remain within **attack range** of their target.
 
-### <img src="https://runescape.wiki/images/Assault.png?47cfd" className="inline h-6 w-6" /> Assault
+### <img src="https://runescape.wiki/images/Assault.png" className="inline h-6 w-6" /> Assault
 
-Assault is a high damaging channelled ability dealing **140%** damage per hit every **1.2s**. This ability hits **4 times** for a total channel time of **4.2s** and a total damage of **560%** with a cooldown of **30s**.
+Unlocked at level **3**, Assault strikes at the target multiple times dealing **145%-175%** damage per hit every **1.2s** with **4 hits** and a **6s** cooldown. This ability is channelled but you can move while channeling. Damage is **75%** effective in PvP.
 
-### <img src="https://runescape.wiki/images/Destroy.png?cbe6b" className="inline h-6 w-6" /> Destroy
+> **Bloodlust** (consumes 4 stacks): Deals **185%-215%** damage per hit instead.
 
-This ability behaves very similarly to Assault but has a **20.4s** cooldown. This deals **130%** damage per hit every **1.2s**, hitting **4 times** for a total channel time of **4.2s** and a total damage of **520%**. Additionally, the target will be **Stunned and Bound** for **3.6s**.
+### <img src="https://runescape.wiki/images/Greater_Flurry.png" className="inline h-6 w-6" /> Greater Flurry
 
-This ability can only be cast with **dual wield** and also shares a cooldown with **Hurricane**.
+Unlocked at level **45**, Greater Flurry swings both weapons rapidly around you dealing **65%-75%** damage per hit every **0.6s** with **8 hits** to up to **8 enemies** within 1 tile. This ability has a **20.4s** cooldown and will **stun and bind** the target for **3.6s**. Each attack extends the duration of **Berserk** by **0.6s**.
 
-### <img src="https://runescape.wiki/images/Flurry.png?de539" className="inline h-6 w-6" /> Flurry
+> **Bloodlust** (consumes 4 stacks): Deals **1% increased damage** for each **1% Life Points** the target is missing, up to a maximum of **65%** bonus damage.
 
-Just like **Destroy**, this is a channelled ability, deals **4 hits** with a total channel time of **4.2s**, has a cooldown of **20.4s** and can only be cast with **dual wield**. Each hit will only deal an average of **65%** damage but will hit up to 8 targets within 1 tile around your character, leading to a total damage per target of **260%**.
-
-> Can be upgraded to <img src="https://runescape.wiki/images/Greater_Flurry.png?e76c4" className="inline h-5 w-5" /> **Greater Flurry** via an ability codex - increases damage from **65%** to **110%** per hit for a total average of **440%**. The cooldown of **Berserk** will also be reduced by **1.2s** for each hit.
+---
 
 ## Area of Effect
 
-### <img src="https://runescape.wiki/images/Hurricane.png?cd190" className="inline h-6 w-6" /> Hurricane
+### <img src="https://runescape.wiki/images/Hurricane.png" className="inline h-6 w-6" /> Hurricane
 
-Casting **Hurricane** spins you on the spot, dealing **135%** damage to your target. You will also deal a secondary hit of **150%** to your main target, and any additional targets within **1 tile** around you. This ability has a **20.4s** cooldown, can only be cast with a **2h** weapon, and shares a cooldown with **Destroy**.
+Unlocked at level **37**, Hurricane spins you on the spot dealing **135%-165%** damage with **2 hits**. The second hit deals **155%-185%** damage to the target and up to **9 additional enemies** within 1 tile of you. The cooldown of Hurricane is reduced by **3s** for each enemy hit. Base cooldown is **20.4s**. Damage is **55%** effective in PvP.
 
-### <img src="https://runescape.wiki/images/Quake.png?47cfd" className="inline h-6 w-6" /> Quake
+> **Bloodlust** (consumes 4 stacks): Adds a **third hit** dealing **75%-95%** damage to the target and up to 9 additional enemies.
 
-Quake is our final **AoE** dealing **145%** damage to all targets within **1 tile** around your character with a cooldown of **20.4s**. This will also reduce the **defence** stat and increase your **hit chance** against all enemies damaged if below **100%** hit chance. Quake can only be cast with a **2h** weapon.
-
-## Stuns
-
-### <img src="https://runescape.wiki/images/Forceful_Backhand.png?8c0bb" className="inline h-6 w-6" /> Forceful Backhand
-
-Forceful Backhand deals **130%** damage with a **15s** cooldown, shared with **Stomp**. When cast it will **stun and bind** the target for **3.6s**.
-
-### <img src="https://runescape.wiki/images/Stomp_%28ability%29.png?babc9" className="inline h-6 w-6" /> Stomp
-
-Stomp deals **130%** damage with a **15s** cooldown, shared with **Forceful Backhand**. When cast it will **stun and bind** the target for **3.6s**.
+---
 
 ## Bleeds
 
-### <img src="https://runescape.wiki/images/Slaughter.png?8b456" className="inline h-6 w-6" /> Slaughter
+### <img src="https://runescape.wiki/images/Dismember.png" className="inline h-6 w-6" /> Dismember
 
-**Slaughter** is a damage over time ability, dealing **35%** average damage per hit, hitting **5 times** over **6s**, with a cooldown of **30s**. If the target moves after the ability is cast, you will deal **3x damage** for an average damage of **105%** per hit. You are able to move most targets manually and if correctly done will lead to an increased damage total of **525%**.
+Unlocked at level **50**, Dismember slices at the target causing them to **Bleed** dealing **25%-35%** damage per hit every **1.2s** with **8 hits**. This ability heals you for **10%** of the damage dealt and has a **24s** cooldown. It can be **recast within 24s** of the previous cast for more powerful follow-up abilities.
 
-### <img src="https://runescape.wiki/images/Blood_Tendrils.png?d79a1" className="inline h-6 w-6" /> Blood Tendrils
+### <img src="https://runescape.wiki/images/Slaughter.png" className="inline h-6 w-6" /> Slaughter (Second Cast)
 
-> This ability is obtained via a codex after [The Dig Site](/guides/early-game/dig-site) quest.
+Unlocked at level **60**, Slaughter is the second cast of Dismember. It stabs the target causing them to **Bleed** dealing **90%-110%** damage per hit every **1.8s** with **6 hits**. Heals you for **10%** of the damage dealt.
 
-**Blood Tendrils** deals an initial hit of **110%** with an additional **4 hits** of **55%** over the next **4.8s**. Blood Tendrils can be a dangerous ability though, as **27%** of the damage dealt from the 4 additional hits is dealt back to your player. This results in a total damage of **330%** and a cooldown of **45s**.
+### <img src="https://runescape.wiki/images/Massacre.png" className="inline h-6 w-6" /> Massacre (Third Cast)
+
+Unlocked at level **75**, Massacre is the third cast of Dismember. It swings at the target causing them to **Bleed** dealing **110%-130%** damage on the first hit, then **120%** damage per hit every **2.4s** with **7 hits** total. Heals you for **10%** of the damage dealt.
+
+</div>

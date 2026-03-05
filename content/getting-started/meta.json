@@ -2,9 +2,9 @@
   "pages": [
     "index",
     "keybinds",
-    "tick-system",
     "combat-basics",
     "damage",
+    "tick-system",
     "necromancy",
     "magic",
     "melee",

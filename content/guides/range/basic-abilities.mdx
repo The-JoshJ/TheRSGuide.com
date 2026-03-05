@@ -3,64 +3,52 @@ title: Ranged Basic Abilities
 description: Adrenaline-generating ranged abilities for your rotation
 ---
 
+<style>
+{`
+  .ability-page h3 + p {
+    margin-top: 0.25rem;
+  }
+`}
+</style>
+
+<div className="ability-page">
+
 ## Overview
 
-Ranged has fewer basics than Melee, but more than Necromancy, for a nice middle ground. Ranged and Magic have quite a few **similar basics** that perform the same, so this can help with familiarity. There are also some abilities that perform similar to Melee, but significantly less.
+Ranged basic abilities focus on building and maintaining **Searing Winds**, a buff that increases your damage output. Many abilities interact with **Snipe** by reducing its cooldown.
 
-All of these Ranged Basic Abilities will generate a base of **8% adrenaline**.
+All of these Ranged Basic Abilities will generate a base of **9% adrenaline**.
 
-## Simple Basics
+## Core Basics
 
-### <img src="https://runescape.wiki/images/Dazing_Shot.png?cf0bd" className="inline h-6 w-6" /> Dazing Shot
+### <img src="https://runescape.wiki/images/Ranged_%28ability%29.png" className="inline h-6 w-6" /> Basic Attack
 
-Dazing Shot is a low cooldown, medium damage ability with an average of **105%** damage with a **5.4s** cooldown. When cast this will reduce your target's **Hit Chance** by **10%** for **4.2s**. This ability can only be cast with a **2h** weapon.
+Basic Attack is your default ability dealing **110%-130%** damage with no cooldown.
 
-## Conditional Damage
+### <img src="https://runescape.wiki/images/Piercing_Shot.png" className="inline h-6 w-6" /> Piercing Shot
 
-### <img src="https://runescape.wiki/images/Piercing_Shot.png?6b1f3" className="inline h-6 w-6" /> Piercing Shot
+Unlocked at level **13**, Piercing Shot fires two piercing shots dealing **45%-55%** damage per hit with **2 hits** and a **3s** cooldown. Each hit reduces the cooldown of **Snipe** by **2.4s**.
 
-Piercing Shot is a low cooldown, low damage ability with an average of **50%** damage per hit, dealing **2** hits for a total average of **100%** and a **3s** cooldown. Damage is increased by **30%** to **130%** if used on a stunned or bound target.
+## Buff Abilities
 
-## Channelled Abilities
+### <img src="https://runescape.wiki/images/Galeshot.png" className="inline h-6 w-6" /> Galeshot
 
-### <img src="https://runescape.wiki/images/Snipe.png?cf0bd" className="inline h-6 w-6" /> Snipe
+Unlocked at level **58**, Galeshot fires an infused shot at the target dealing **90%-110%** damage with a **20.4s** cooldown. This ability applies **Searing Winds** to yourself for **6s**.
 
-This is the only **channelled** Ranged basic, dealing **185%** average damage after charging up for **2.4s**, with a cooldown of **10.2s**. This charge time is **1 tick** longer than the normal global cooldown of **1.8s**.
-
-## Bleeds
-
-### <img src="https://runescape.wiki/images/Fragmentation_Shot.png?5e685" className="inline h-6 w-6" /> Fragmentation Shot
-
-Fragmentation Shot is a damage over time basic, dealing **28%** average damage per hit, for **5** hits over **5.4s**, for a total of **140%**. If the target moves, you will deal **2x** damage for a total of **280%**. The cooldown is **15s**.
+**Searing Winds**: Ranged attacks deal an additional **20% bonus damage** with each hit.
 
 ## Area of Effect
 
-### <img src="https://runescape.wiki/images/Corruption_Shot.png?ac6e7" className="inline h-6 w-6" /> Corruption Shot
+### <img src="https://runescape.wiki/images/Ricochet.png" className="inline h-6 w-6" /> Ricochet
 
-> This ability is obtained via a codex unlock.
+Unlocked at level **67**, Ricochet fires a shot which ricochets off the target dealing **75%-85%** damage to the target and up to **2 additional enemies** within 5 tiles. If no additional targets can be found, the target will be hit for an additional **15%-20%** damage for each missing enemy. This ability has a **10.2s** cooldown.
 
-Despite being in the AoE section, Corruption Shot is importantly **also** a bleed, but it is mainly used for AoE situations.
-
-This will deal a hit to your target of **70%**. Each subsequent hit will be reduced by **20%** of the initial hit for a total of **5 hits**: 70%, 56%, 42%, 28%, 14%, with an overall value of **210%** and a cooldown of **15s**.
-
-Additionally, this will spread to all targets within **2** tiles of the primary target, and deal all remaining hits to all targets. This can spread continuously to other targets, until all 5 hits have occurred.
-
-### <img src="https://runescape.wiki/images/Ricochet.png?a50f0" className="inline h-6 w-6" /> Ricochet
-
-Ricochet deals **70%** average damage to your target, and up to **2** additional targets within **5** tiles of your main target. Ricochet has a cooldown of **10.2s**.
-
-> Can be upgraded to <img src="https://runescape.wiki/images/Greater_Ricochet.png?93e69" className="inline h-5 w-5" /> **Greater Ricochet** via an ability codex.
->
-> Greater Ricochet works similarly to Ricochet but provides an additional effect. If you do not have any additional targets around you, Ricochet will instead deal the **2** additional hits onto your primary target, dealing **35%** average damage each.
+> Can be upgraded to <img src="https://runescape.wiki/images/Greater_Ricochet.png" className="inline h-5 w-5" /> **Greater Ricochet** via an ability codex for enhanced multi-target damage.
 
 ## Stuns
 
-### <img src="https://runescape.wiki/images/Binding_Shot.png?5e685" className="inline h-6 w-6" /> Binding Shot
+### <img src="https://runescape.wiki/images/Binding_Shot.png" className="inline h-6 w-6" /> Binding Shot
 
-Binding Shot deals **70%** average damage, **stunning** the target for **1.2s** and **binding** the target for **9.6s**, with a **15s** cooldown.
+Unlocked at level **31**, Binding Shot fires a binding shot dealing **65%-75%** damage with a **15s** cooldown. This ability **stuns** the target for **1.2s** and **binds** the target for **9.6s**. It holds **2 charges** (second charge unlocks at level **54**).
 
-## Ability Synergy
-
-### <img src="https://runescape.wiki/images/Needle_Strike.png?c028b" className="inline h-6 w-6" /> Needle Strike
-
-Needle Strike deals **105%** average damage and has a **5.4s** cooldown. When cast, this will increase the damage of your next ability by **7%**. Needle Strike can only be cast with **dual wield** weapons.
+</div>

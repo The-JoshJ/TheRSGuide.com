@@ -3,76 +3,66 @@ title: Magic Basic Abilities
 description: Adrenaline-generating magic abilities for your rotation
 ---
 
+<style>
+{`
+  .ability-page h3 + p {
+    margin-top: 0.25rem;
+  }
+`}
+</style>
+
+<div className="ability-page">
+
 ## Overview
 
-Magic has fewer basics than Melee, but more than Necromancy, for a nice middle ground. Magic and Range have quite a few **similar basics** that perform the same, so this can help with familiarity.
+Magic basic abilities focus on the **Flow** mechanic which reduces the adrenaline cost of your next ability. Many abilities also interact with status effects like **Combusted** for bonus damage.
 
-All of these Magic Basic Abilities will generate a base of **8% adrenaline**.
+All of these Magic Basic Abilities will generate a base of **9% adrenaline**.
 
-## Conditional Damage
+## Core Basics
 
-### <img src="https://runescape.wiki/images/Wrack.png?1e65a" className="inline h-6 w-6" /> Wrack
+### <img src="https://runescape.wiki/images/Magic_%28ability%29.png" className="inline h-6 w-6" /> Basic Attack
 
-Wrack is a low cooldown, low damage ability with an average of **100%** damage and a **3s** cooldown. Damage is increased by **30%** to **130%** if used on a stunned or bound target.
+Basic Attack is your default ability dealing **110%-130%** damage with no cooldown.
 
-## Channelled Abilities
+### <img src="https://runescape.wiki/images/Sonic_Wave.png" className="inline h-6 w-6" /> Sonic Wave
 
-### <img src="https://runescape.wiki/images/Concentrated_Blast.png?ac732" className="inline h-6 w-6" /> Concentrated Blast
+Unlocked at level **6**, Sonic Wave is a focused blast of magic that pummels the target dealing **90%-110%** damage with a **15s** cooldown. When cast, this applies **Flow** to yourself for **9s**.
 
-This is the only **channelled** Magic basic, dealing **3** hits over **3.0s**. These hits deal progressively more damage: **50%**, **55%** and **60%**, totalling **165%**.
+**Flow**: Your next Magic ability costs **10% less adrenaline**.
 
-Each hit also increases your **Critical Strike Chance** of your next magic attack by **5%**. This means that the 2nd hit will have a 5% increased chance, the 3rd 10%, and the first hit of your next magic ability 15%.
-
-It is worth noting that you may want to stop this ability from **fully channelling** by using your next ability as soon as possible, dealing only the first 2 hits. This ability has a short cooldown of **5.4s** that is shared with **Sonic Wave**.
-
-> This ability can be upgraded to <img src="https://runescape.wiki/images/Greater_Concentrated_Blast.png?445f0" className="inline h-5 w-5" /> **Greater Concentrated Blast** via an ability codex. This increases the total damage from **165%** to **168%** and compresses the 3 hits into **1.8s**.
-
-## Bleeds
-
-### <img src="https://runescape.wiki/images/Combust.png?60657" className="inline h-6 w-6" /> Combust
-
-Combust is a damage over time basic, dealing **28%** average damage per hit, for **5** hits over **5.4s**, for a total of **140%**. If the target moves, you will deal **2x** damage for a total of **280%**. The cooldown is **15s**.
+> Can be upgraded to <img src="https://runescape.wiki/images/Greater_Sonic_Wave.png" className="inline h-5 w-5" /> **Greater Sonic Wave** via an ability codex for increased damage and Flow duration.
 
 ## Area of Effect
 
-### <img src="https://runescape.wiki/images/Corruption_Blast.png?ee4cd" className="inline h-6 w-6" /> Corruption Blast
+### <img src="https://runescape.wiki/images/Dragon_Breath.png" className="inline h-6 w-6" /> Dragon Breath
 
-> This ability is obtained via a codex unlock.
+Unlocked at level **19**, Dragon Breath breathes a mighty cloud of fire dealing **110%-130%** damage to the target and up to **4 additional enemies** in a cone in the attack direction with a **7.2s** cooldown. Deals **1.25x damage** to **Combusted** enemies.
 
-Despite being in the AoE section, Corruption Blast is importantly **also** a bleed, but it is mainly used for AoE situations.
+### <img src="https://runescape.wiki/images/Chain.png" className="inline h-6 w-6" /> Chain
 
-This will deal a hit to your target of **70%**. Each subsequent hit will be reduced by **20%** of the initial hit for a total of **5 hits**: 70%, 56%, 42%, 28%, 14%, with an overall value of **210%** and a cooldown of **15s**.
+Unlocked at level **51**, Chain fires a magical spell that chains between nearby targets dealing **70%-90%** damage to the target and up to **2 additional enemies** within 5 tiles with a **10.2s** cooldown. Your next Magic ability against the target within **6s** will also target the additional enemies, dealing **30% damage**.
 
-Additionally, this will spread to all targets within **2** tiles of the primary target.
+> Can be upgraded to <img src="https://runescape.wiki/images/Greater_Chain.png" className="inline h-5 w-5" /> **Greater Chain** via an ability codex for enhanced multi-target damage.
 
-### <img src="https://runescape.wiki/images/Dragon_Breath.png?2348f" className="inline h-6 w-6" /> Dragon Breath
+## Bleeds
 
-This ability deals **120%** average damage to your primary target, and up to **4** additional targets within a frontal cone, with a cooldown of **10.2s**.
+### <img src="https://runescape.wiki/images/Combust.png" className="inline h-6 w-6" /> Combust
 
-### <img src="https://runescape.wiki/images/Chain.png?93d11" className="inline h-6 w-6" /> Chain
-
-Chain deals **70%** average damage to your target, and up to **2** additional targets within **5** tiles of your main target. Chain has a cooldown of **10.2s**.
-
-> Can be upgraded to <img src="https://runescape.wiki/images/Greater_Chain.png?c6bba" className="inline h-5 w-5" /> **Greater Chain** - your next ability will deal full damage to your main target, and half damage to all targets hit with Greater Chain.
-
-### <img src="https://runescape.wiki/images/Magma_Tempest.png?79578" className="inline h-6 w-6" /> Magma Tempest
-
-> This ability is obtained via a codex unlock.
-
-Magma Tempest creates a **5x5** area of rain dealing **8** hits over **9.6s**. Any targets within this area will be hit for **27.5%** per hit, up to a total of **220%** if all hits deal damage, with a **15s** cooldown.
-
-**Note:** There are 2 variants - instant cast (centered on target) and targeted (click to place).
+Unlocked at level **38**, Combust explodes the target causing them to **Burn** dealing **27%-33%** damage per hit every **1.8s** with **10 hits** and an **18s** cooldown.
 
 ## Stuns
 
-### <img src="https://runescape.wiki/images/Impact.png?f3bec" className="inline h-6 w-6" /> Impact
+### <img src="https://runescape.wiki/images/Impact.png" className="inline h-6 w-6" /> Impact
 
-Impact deals **70%** average damage, **stunning** and **binding** the target for **1.2s**, with a **15s** cooldown.
+Unlocked at level **31**, Impact smashes the target with a burst of earth energy dealing **65%-75%** damage with a **15s** cooldown. This ability **stuns and binds** the target for **1.8s** and holds **2 charges** (second charge unlocks at level **54**).
 
-## Ability Synergy
+## Channelled Abilities
 
-### <img src="https://runescape.wiki/images/Sonic_Wave.png?18065" className="inline h-6 w-6" /> Sonic Wave
+### <img src="https://runescape.wiki/images/Concentrated_Blast.png" className="inline h-6 w-6" /> Concentrated Blast
 
-Sonic Wave deals **105%** average damage and has a **5.4s** cooldown shared with **Concentrated Blast**. When cast you will generate **6 Flow** stacks for **3s**. Flow stacks increase your **Hit Chance** by **1%** per stack.
+Unlocked at level **66**, Concentrated Blast blasts the target with beams of concentrated energy attacking **3 times** over **1.8s** dealing **30%-40%** damage per hit with a **5.4s** cooldown. This ability is channelled. Each attack increases the **Critical Strike Chance** of your next Magic attack by **5%**, stacking to a maximum of **15%**.
 
-> Can be upgraded to <img src="https://runescape.wiki/images/Greater_Sonic_Wave.png?465a4" className="inline h-5 w-5" /> **Greater Sonic Wave** - increases damage to **125%** and generates **8 Flow** stacks for **4.2s** that also increase damage by **1%** per stack.
+> Can be upgraded to <img src="https://runescape.wiki/images/Greater_Concentrated_Blast.png" className="inline h-5 w-5" /> **Greater Concentrated Blast** via an ability codex for increased damage and compressed channel time.
+
+</div>
