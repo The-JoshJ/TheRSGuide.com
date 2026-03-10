@@ -16,7 +16,7 @@ export const SplitItem = ({
       }
     : {};
 
-  const className = width ? "min-w-0" : "flex-1 min-w-0";
+  const className = width ? "not-prose min-w-0" : "not-prose flex-1 min-w-0";
 
   return (
     <div className={className} style={style}>
@@ -41,7 +41,7 @@ export const SplitContent = ({
 // Center component for centering content horizontally
 export const Center = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="flex justify-center items-center">
+    <div className="not-prose flex justify-center items-center w-full">
       {children}
     </div>
   );

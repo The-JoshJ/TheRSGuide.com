@@ -1,24 +1,21 @@
-import { setup, gettingStarted, guides } from "@/lib/source";
-import { createFromSource } from "fumadocs-core/search/server";
-
-const setupSearch = createFromSource(setup, { language: "english" });
-const gettingStartedSearch = createFromSource(gettingStarted, { language: "english" });
-const guidesSearch = createFromSource(guides, { language: "english" });
+import { searchPriorityKeywords, type PriorityResult } from "@/lib/search-keywords";
 
 export async function GET(request: Request) {
   const url = new URL(request.url);
-	const query = url.searchParams.get("query");
-	if (!query) return Response.json([]);
+  const query = url.searchParams.get("query");
+  if (!query) return Response.json([]);
 
-	const [s1, s2, s3] = await Promise.all([
-		setupSearch.search(query),
-		gettingStartedSearch.search(query),
-		guidesSearch.search(query),
-	]);
+  // Get results from keyword mappings
+  const priorityResults = searchPriorityKeywords(query);
 
+  // Convert to search result format
+  const results = priorityResults.map((r: PriorityResult) => ({
+    type: "page" as const,
+    id: r.url,
+    url: r.url,
+    content: r.title,
+    description: r.description,
+  }));
 
-	const merged = [...s1, ...s2, ...s3]
-
-
-	return Response.json(merged);
-};
+  return Response.json(results);
+}

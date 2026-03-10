@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <main className="homepage relative min-h-screen overflow-hidden bg-[var(--bg-base)]">
+    <main className="homepage relative h-[calc(100dvh-56px)] md:h-[calc(100dvh-64px)] overflow-hidden bg-[var(--bg-base)]">
       {/* Atmospheric background layers */}
       <div className="homepage-gradient absolute inset-0" />
       <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-[0.03]" />
@@ -11,7 +11,7 @@ export default function HomePage() {
       <div className="homepage-vignette absolute inset-0" />
 
       {/* Main content */}
-      <div className="relative z-10 flex flex-col min-h-screen">
+      <div className="relative z-10 flex flex-col h-full">
 
         {/* Hero Section */}
         <section className="flex-1 flex flex-col items-center justify-center px-6 py-20">
@@ -69,17 +69,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className="border-t border-[var(--border-subtle)] px-6 py-6">
-          <div className="max-w-4xl mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <p className="text-sm text-[var(--text-muted)]">
-             Built by Griffin, Josh, Pup & Ryan (The RS Guy)
-            </p>
-            <p className="text-xs text-[var(--text-muted)] opacity-70">
-              © 2025
-            </p>
-          </div>
-        </footer>
       </div>
     </main>
   );
