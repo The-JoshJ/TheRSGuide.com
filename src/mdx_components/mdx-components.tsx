@@ -18,7 +18,8 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
   return {
     ...defaultMdxComponents,
     img: (props) => {
-      if (!props.src) return null;
+      const src = props.src as string | undefined;
+      if (!src || src.trim() === '') return null;
       return <ImageZoom {...(props as any)} />;
     },
     strong: (props) => (
