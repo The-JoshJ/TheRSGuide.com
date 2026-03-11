@@ -55,8 +55,8 @@ export const InteractiveLegend: React.FC<InteractiveLegendProps> = ({
           className="block w-full rounded-lg border border-[var(--color-fd-border)]"
         />
         <p className="mt-2 text-xs text-[var(--color-fd-muted-foreground)] text-center">
-          <span className="md:hidden">Tap to view on map</span>
-          <span className="hidden md:inline">Hover to preview, click to lock</span>
+          <span className="md:hidden">Tap the rows to update the image</span>
+          <span className="hidden md:inline">Hover the rows to preview, click to lock</span>
         </p>
       </div>
 

@@ -70,9 +70,14 @@ export const SkillContent: React.FC<SkillContentProps> = ({ skill, requiredLevel
       {/* Level Brackets */}
       <div className="space-y-3">
         {skillInfo.map((range, idx) => {
-          const isCompleted = playerLevel !== null && playerLevel >= range.end;
-          const isCurrent = playerLevel !== null && playerLevel >= range.start && playerLevel < range.end;
+          const isCompleted = playerLevel !== null && playerLevel > range.end;
+          const isCurrent = playerLevel !== null && playerLevel >= range.start && playerLevel <= range.end;
           const isTarget = requiredLevel !== undefined && range.start <= requiredLevel && range.end >= requiredLevel;
+
+          // Format level display - show single level if start equals end
+          const levelDisplay = range.start === range.end
+            ? `Level ${range.start}`
+            : `Levels ${range.start} - ${range.end}`;
 
           return (
             <div
@@ -90,7 +95,7 @@ export const SkillContent: React.FC<SkillContentProps> = ({ skill, requiredLevel
               <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center gap-2">
                   <span className="font-semibold text-sm">
-                    Levels {range.start} - {range.end}
+                    {levelDisplay}
                   </span>
                   {isCompleted && (
                     <span className="text-xs px-1.5 py-0.5 rounded bg-[#7d9a78]/20 text-[#3d6b35] dark:text-[#a8c4a2]">

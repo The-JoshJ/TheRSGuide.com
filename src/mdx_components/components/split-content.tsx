@@ -16,8 +16,8 @@ export const SplitItem = ({
     : {};
 
   const className = width
-    ? "not-prose min-w-0 w-full md:w-auto md:flex-none md:[flex-basis:var(--split-width)] md:max-w-[var(--split-width)]"
-    : "not-prose flex-1 min-w-0 w-full md:w-auto";
+    ? "min-w-0 w-full md:w-auto md:flex-none md:[flex-basis:var(--split-width)] md:max-w-[var(--split-width)]"
+    : "flex-1 min-w-0 w-full md:w-auto";
 
   return (
     <div className={className} style={style}>
