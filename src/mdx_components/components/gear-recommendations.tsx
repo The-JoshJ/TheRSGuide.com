@@ -29,41 +29,74 @@ interface GearRecommendationsProps {
   style: CombatStyle;
 }
 
+// Group items by tier for displaying alternatives
+interface TierGroup {
+  tier: number;
+  items: GearItem[];
+}
+
+const groupItemsByTier = (items: GearItem[]): TierGroup[] => {
+  const groups: TierGroup[] = [];
+  let currentGroup: TierGroup | null = null;
+
+  items.forEach((item) => {
+    if (currentGroup && currentGroup.tier === item.tier) {
+      currentGroup.items.push(item);
+    } else {
+      currentGroup = { tier: item.tier, items: [item] };
+      groups.push(currentGroup);
+    }
+  });
+
+  return groups;
+};
+
 const GearList: React.FC<{ title: string; items: GearItem[] }> = ({ title, items }) => {
+  const tierGroups = groupItemsByTier(items);
+
   return (
     <div className="my-4">
       <h3 className="text-sm font-medium text-fd-muted-foreground uppercase tracking-wide mb-3">
         {title}
       </h3>
       <div className="border border-fd-border rounded-lg overflow-hidden">
-        {items.map((item, index) => (
+        {tierGroups.map((group, groupIndex) => (
           <div
-            key={`${item.name}-${item.tier}-${index}`}
+            key={`tier-${group.tier}-${groupIndex}`}
             className={`flex items-center justify-between px-4 py-3 ${
-              index !== items.length - 1 ? 'border-b border-fd-border' : ''
+              groupIndex !== tierGroups.length - 1 ? 'border-b border-fd-border' : ''
             }`}
           >
-            <div className="flex items-center gap-3 min-w-0">
+            <div className="flex items-center gap-3 min-w-0 flex-1">
               <span className="text-xs font-mono text-fd-muted-foreground w-8 flex-shrink-0">
-                T{item.tier}
+                T{group.tier}
               </span>
-              <span className="font-medium truncate">{item.name}</span>
+              <div className="flex flex-wrap items-center gap-1 min-w-0">
+                {group.items.map((item, itemIndex) => (
+                  <React.Fragment key={`${item.name}-${itemIndex}`}>
+                    {itemIndex > 0 && (
+                      <span className="text-xs text-fd-muted-foreground mx-1">OR</span>
+                    )}
+                    <span className="font-medium">{item.name}</span>
+                    {item.ironman && (
+                      <span
+                        className="text-xs px-1.5 py-0.5 rounded bg-[#4a5d4a]/20 text-[#6b8b6b]"
+                        title="Ironman friendly"
+                      >
+                        IM
+                      </span>
+                    )}
+                    {item.note && (
+                      <span className="text-xs text-fd-muted-foreground hidden sm:inline">
+                        ({item.note})
+                      </span>
+                    )}
+                  </React.Fragment>
+                ))}
+              </div>
             </div>
             <div className="flex items-center gap-2 flex-shrink-0">
-              {item.note && (
-                <span className="text-xs text-fd-muted-foreground hidden sm:inline">
-                  {item.note}
-                </span>
-              )}
-              {item.ironman && (
-                <span
-                  className="text-xs px-1.5 py-0.5 rounded bg-[#4a5d4a]/20 text-[#6b8b6b]"
-                  title="Ironman friendly"
-                >
-                  IM
-                </span>
-              )}
-              {index < items.length - 1 && (
+              {groupIndex < tierGroups.length - 1 && (
                 <svg
                   width="16"
                   height="16"

@@ -8,7 +8,12 @@
         { "name": "Rune Halberd", "tier": 50, "ironman": true },
         { "name": "Dragon Halberd", "tier": 60, "ironman": true },
         { "name": "Crystal Halberd", "tier": 70, "ironman": true },
-        { "name": "Laneika's Spear", "tier": 82, "ironman": false, "note": "T85 damage" },
+        {
+          "name": "Laniakea's Spear",
+          "tier": 82,
+          "ironman": false,
+          "note": "T85 damage"
+        },
         { "name": "Dragon Rider Lance", "tier": 85, "ironman": true },
         { "name": "Noxious Scythe", "tier": 90, "ironman": true },
         { "name": "Tumeken's Light", "tier": 95, "ironman": false }
@@ -18,7 +23,12 @@
         { "name": "Mithril Armour", "tier": 30, "ironman": true },
         { "name": "Rune Armour", "tier": 50, "ironman": true },
         { "name": "Bandos Armour", "tier": 70, "ironman": true },
-        { "name": "Banite Armour +4", "tier": 79, "ironman": true, "note": "Level 80 req" },
+        {
+          "name": "Banite Armour +4",
+          "tier": 79,
+          "ironman": true,
+          "note": "Level 80 req"
+        },
         { "name": "Torva Armour", "tier": 80, "ironman": false },
         { "name": "Masterwork Melee Armour", "tier": 90, "ironman": true },
         { "name": "Vestments of Havoc", "tier": 95, "ironman": false }
@@ -26,29 +36,66 @@
     },
     "pvm": {
       "weapons": [
-        { "name": "Reeses' Swords", "tier": 1, "ironman": true, "note": "From Blood Pact Quest" },
+        {
+          "name": "Reeses' Swords",
+          "tier": 1,
+          "ironman": true,
+          "note": "From Blood Pact Quest"
+        },
         { "name": "Mithril Swords", "tier": 30, "ironman": true },
         { "name": "Adamant Swords", "tier": 40, "ironman": true },
         { "name": "Rune Swords", "tier": 50, "ironman": true },
         { "name": "Dragon Scimitars", "tier": 60, "ironman": true },
-        { "name": "Necronium Battleaxe +4", "tier": 74, "ironman": true, "note": "Level 70 req" },
+        {
+          "name": "Necronium Battleaxe +4",
+          "tier": 74,
+          "ironman": true,
+          "note": "Level 70 req"
+        },
         { "name": "Vanquish", "tier": 75, "ironman": true },
         { "name": "Sunspear", "tier": 78, "ironman": true },
-        { "name": "Bane Longswords +4", "tier": 79, "ironman": true, "note": "Level 80 req" },
+        {
+          "name": "Bane Longswords +4",
+          "tier": 79,
+          "ironman": true,
+          "note": "Level 80 req"
+        },
         { "name": "Chaotic Longswords", "tier": 80, "ironman": true },
-        { "name": "Dark Ice Shard and Sliver", "tier": 88, "ironman": false, "note": "Level 85 req" },
+        {
+          "name": "Dark Ice Shard and Sliver",
+          "tier": 88,
+          "ironman": false,
+          "note": "Level 85 req"
+        },
         { "name": "Drygore Longswords", "tier": 90, "ironman": true },
-        { "name": "Scourge of the Abyss / Masterwork Spear of Annihilation", "tier": 92, "ironman": false },
-        { "name": "Dark Shard and Sliver of Leng / Ek-Zekkil", "tier": 95, "ironman": false }
+        {
+          "name": "Masterwork Spear of Annihilation",
+          "tier": 92,
+          "ironman": true
+        },
+        { "name": "Scourge of the Abyss", "tier": 92, "ironman": false },
+        {
+          "name": "Dark Shard and Sliver of Leng",
+          "tier": 95,
+          "ironman": false
+        },
+        { "name": "Ek-Zekkil", "tier": 95, "ironman": false }
       ],
       "armour": [
         { "name": "Bronze Armour", "tier": 1, "ironman": true },
         { "name": "Mithril Armour", "tier": 30, "ironman": true },
         { "name": "Rune Armour", "tier": 50, "ironman": true },
-        { "name": "Bandos Armour / Barrows Armour", "tier": 70, "ironman": true },
-        { "name": "Banite Armour +4", "tier": 79, "ironman": true, "note": "Level 80 req" },
+        { "name": "Bandos Armour", "tier": 70, "ironman": true },
+        { "name": "Barrows Armour", "tier": 70, "ironman": true },
+        {
+          "name": "Banite Armour +4",
+          "tier": 79,
+          "ironman": true,
+          "note": "Level 80 req"
+        },
         { "name": "Torva Armour", "tier": 80, "ironman": false },
-        { "name": "Masterwork Melee Armour / Malevolent Armour", "tier": 90, "ironman": true },
+        { "name": "Masterwork Melee Armour", "tier": 90, "ironman": true },
+        { "name": "Malevolent Armour", "tier": 90, "ironman": false },
         { "name": "Vestments of Havoc", "tier": 95, "ironman": false }
       ]
     }
@@ -56,13 +103,38 @@
   "ranged": {
     "training": {
       "weapons": [
-        { "name": "Kayle's Chargebow", "tier": 1, "ironman": true, "note": "From Blood Pact Quest" },
+        {
+          "name": "Kayle's Chargebow",
+          "tier": 1,
+          "ironman": true,
+          "note": "From Blood Pact Quest"
+        },
         { "name": "Maple Shortbow", "tier": 30, "ironman": true },
-        { "name": "Grey Chinchompa + Offhand Adamant Crossbow", "tier": 45, "ironman": true },
-        { "name": "Red Chinchompa + Offhand Rune Crossbow", "tier": 55, "ironman": true },
-        { "name": "Mechanized Chinchompas + Offhand Armadyl Crossbow", "tier": 75, "ironman": true },
-        { "name": "Mechanized Chinchompas + Offhand Ascension Crossbow", "tier": 90, "ironman": false },
-        { "name": "Mechanized Chinchompas + Offhand Blightbound Crossbow", "tier": 92, "ironman": false }
+        {
+          "name": "Grey Chinchompa + Offhand Adamant Crossbow",
+          "tier": 45,
+          "ironman": true
+        },
+        {
+          "name": "Red Chinchompa + Offhand Rune Crossbow",
+          "tier": 55,
+          "ironman": true
+        },
+        {
+          "name": "Mechanized Chinchompas + Offhand Armadyl Crossbow",
+          "tier": 75,
+          "ironman": true
+        },
+        {
+          "name": "Mechanized Chinchompas + Offhand Ascension Crossbow",
+          "tier": 90,
+          "ironman": false
+        },
+        {
+          "name": "Mechanized Chinchompas + Offhand Blightbound Crossbow",
+          "tier": 92,
+          "ironman": false
+        }
       ],
       "armour": [
         { "name": "Leather Armour", "tier": 1, "ironman": true },
@@ -73,7 +145,8 @@
         { "name": "Armadyl Armour", "tier": 70, "ironman": true },
         { "name": "Undead Dragonhide Armour", "tier": 75, "ironman": true },
         { "name": "Pernix Armour", "tier": 80, "ironman": false },
-        { "name": "Sirenic Armour / Dracolich Armour", "tier": 90, "ironman": false },
+        { "name": "Sirenic Armour", "tier": 90, "ironman": false },
+        { "name": "Dracolich Armour", "tier": 90, "ironman": false },
         { "name": "Elite Dracolich", "tier": 95, "ironman": false }
       ]
     },
@@ -81,16 +154,23 @@
       "weapons": [
         { "name": "Kayle's Chargebow", "tier": 1, "ironman": true },
         { "name": "Maple Shortbow", "tier": 30, "ironman": true },
-        { "name": "Grey Chinchompa + Offhand Adamant Crossbow", "tier": 45, "ironman": true },
+        {
+          "name": "Grey Chinchompa + Offhand Adamant Crossbow",
+          "tier": 45,
+          "ironman": true
+        },
         { "name": "Rune Crossbows", "tier": 50, "ironman": true },
         { "name": "Elder Short Bow", "tier": 60, "ironman": true },
-        { "name": "Black Salamander / Crystal Bow", "tier": 70, "ironman": true },
+        { "name": "Black Salamander", "tier": 70, "ironman": true },
+        { "name": "Crystal Bow", "tier": 70, "ironman": true },
         { "name": "Vanquish", "tier": 75, "ironman": true },
         { "name": "Sunspear", "tier": 78, "ironman": true },
-        { "name": "Royal Crossbow / Attuned Crystal Bow", "tier": 80, "ironman": true },
+        { "name": "Royal Crossbow", "tier": 80, "ironman": true },
+        { "name": "Attuned Crystal Bow", "tier": 80, "ironman": true },
         { "name": "Wyvern Crossbow", "tier": 85, "ironman": false },
         { "name": "Decimation Bow", "tier": 87, "ironman": false },
-        { "name": "Noxious Longbow / Gloomfire Bow", "tier": 90, "ironman": true },
+        { "name": "Noxious Longbow", "tier": 90, "ironman": true },
+        { "name": "Gloomfire Bow", "tier": 90, "ironman": true },
         { "name": "Seren Godbow", "tier": 92, "ironman": false },
         { "name": "Bow of the Last Guardian", "tier": 95, "ironman": false }
       ],
@@ -103,7 +183,8 @@
         { "name": "Armadyl Armour", "tier": 70, "ironman": true },
         { "name": "Undead Dragonhide Armour", "tier": 75, "ironman": true },
         { "name": "Pernix Armour", "tier": 80, "ironman": false },
-        { "name": "Sirenic Armour / Dracolich Armour", "tier": 90, "ironman": false },
+        { "name": "Sirenic Armour", "tier": 90, "ironman": false },
+        { "name": "Dracolich Armour", "tier": 90, "ironman": false },
         { "name": "Elite Dracolich", "tier": 95, "ironman": false }
       ]
     }
@@ -111,17 +192,39 @@
   "magic": {
     "training": {
       "weapons": [
-        { "name": "Caitlyn's Staff", "tier": 1, "ironman": true, "note": "From Blood Pact Quest" },
+        {
+          "name": "Caitlyn's Staff",
+          "tier": 1,
+          "ironman": true,
+          "note": "From Blood Pact Quest"
+        },
         { "name": "Batwing Wand + Batwing Book", "tier": 30, "ironman": true },
         { "name": "Mystic Wand + Mystic Orb", "tier": 50, "ironman": true },
         { "name": "Guthix Staff", "tier": 60, "ironman": true },
-        { "name": "Vanquish / Abyssal Wand + Abyssal Orb", "tier": 75, "ironman": true },
+        { "name": "Vanquish", "tier": 75, "ironman": true },
+        { "name": "Abyssal Wand + Abyssal Orb", "tier": 75, "ironman": false },
         { "name": "Sunspear", "tier": 78, "ironman": true },
-        { "name": "Chaotic Staff / Virtus Wand + Virtus Book", "tier": 80, "ironman": true },
-        { "name": "Wand of the Cywir Elders + Virtus Book / Orb of the Cywir Elders", "tier": 85, "ironman": true },
+        { "name": "Chaotic Staff", "tier": 80, "ironman": true },
+        { "name": "Virtus Wand + Virtus Book", "tier": 80, "ironman": false },
+        {
+          "name": "Wand of the Cywir Elders + Orb of the Cywir Elders",
+          "tier": 85,
+          "ironman": true
+        },
         { "name": "Obliteration Staff", "tier": 87, "ironman": false },
-        { "name": "Seismic Wand + Singularity / Noxious Staff / Legatus Emberstaff", "tier": 90, "ironman": true },
-        { "name": "Roar of Awakening + Ode to Deceit / Fractured Staff of Armadyl", "tier": 95, "ironman": true }
+        {
+          "name": "Seismic Wand + Seismic Singularity",
+          "tier": 90,
+          "ironman": false
+        },
+        { "name": "Noxious Staff", "tier": 90, "ironman": false },
+        { "name": "Legatus Emberstaff", "tier": 90, "ironman": true },
+        {
+          "name": "Roar of Awakening + Ode to Deceit",
+          "tier": 95,
+          "ironman": true
+        },
+        { "name": "Fractured Staff of Armadyl", "tier": 95, "ironman": false }
       ],
       "armour": [
         { "name": "Wizard Robes", "tier": 1, "ironman": true },
@@ -129,27 +232,55 @@
         { "name": "Mystic Robes", "tier": 50, "ironman": true },
         { "name": "Lunar Armour", "tier": 60, "ironman": true },
         { "name": "Subjugation Armour", "tier": 70, "ironman": true },
-        { "name": "Ganodermic Armour", "tier": 75, "ironman": false },
+        { "name": "Ganodermic Armour", "tier": 75, "ironman": true },
         { "name": "Virtus Armour", "tier": 80, "ironman": false },
-        { "name": "Tectonic Armour / Cryptbloom Armour", "tier": 90, "ironman": true },
-        { "name": "Elite Tectonic Armour", "tier": 92, "ironman": false },
+        { "name": "Tectonic Armour", "tier": 90, "ironman": true },
+        { "name": "Cryptbloom Armour", "tier": 90, "ironman": false },
+        { "name": "Elite Tectonic Armour", "tier": 92, "ironman": true },
         { "name": "Tumeken's Resplendence", "tier": 95, "ironman": false },
-        { "name": "Masterwork Magic Armour", "tier": 99, "ironman": false, "note": "Less damage than T95, but high HP and Defence" }
+        {
+          "name": "Masterwork Magic Armour",
+          "tier": 99,
+          "ironman": false,
+          "note": "Less damage than T95, but high HP and Defence"
+        }
       ]
     },
     "pvm": {
       "weapons": [
-        { "name": "Caitlyn's Staff", "tier": 1, "ironman": true, "note": "From Blood Pact Quest" },
+        {
+          "name": "Caitlyn's Staff",
+          "tier": 1,
+          "ironman": true,
+          "note": "From Blood Pact Quest"
+        },
         { "name": "Batwing Wand + Batwing Book", "tier": 30, "ironman": true },
         { "name": "Mystic Wand + Mystic Orb", "tier": 50, "ironman": true },
         { "name": "Guthix Staff", "tier": 60, "ironman": true },
-        { "name": "Vanquish / Abyssal Wand + Abyssal Orb", "tier": 75, "ironman": true },
+        { "name": "Vanquish", "tier": 75, "ironman": true },
+        { "name": "Abyssal Wand + Abyssal Orb", "tier": 75, "ironman": false },
         { "name": "Sunspear", "tier": 78, "ironman": true },
-        { "name": "Chaotic Staff / Virtus Wand + Virtus Book", "tier": 80, "ironman": true },
-        { "name": "Wand of the Cywir Elders + Virtus Book / Orb of the Cywir Elders", "tier": 85, "ironman": true },
+        { "name": "Chaotic Staff", "tier": 80, "ironman": true },
+        { "name": "Virtus Wand + Virtus Book", "tier": 80, "ironman": false },
+        {
+          "name": "Wand of the Cywir Elders + Orb of the Cywir Elders",
+          "tier": 85,
+          "ironman": true
+        },
         { "name": "Obliteration Staff", "tier": 87, "ironman": false },
-        { "name": "Seismic Wand + Singularity / Noxious Staff / Legatus Emberstaff", "tier": 90, "ironman": true },
-        { "name": "Roar of Awakening + Ode to Deceit / Fractured Staff of Armadyl", "tier": 95, "ironman": true }
+        {
+          "name": "Seismic Wand + Seismic Singularity",
+          "tier": 90,
+          "ironman": false
+        },
+        { "name": "Noxious Staff", "tier": 90, "ironman": false },
+        { "name": "Legatus Emberstaff", "tier": 90, "ironman": true },
+        {
+          "name": "Roar of Awakening + Ode to Deceit",
+          "tier": 95,
+          "ironman": true
+        },
+        { "name": "Fractured Staff of Armadyl", "tier": 95, "ironman": false }
       ],
       "armour": [
         { "name": "Wizard Robes", "tier": 1, "ironman": true },
@@ -157,12 +288,18 @@
         { "name": "Mystic Robes", "tier": 50, "ironman": true },
         { "name": "Lunar Armour", "tier": 60, "ironman": true },
         { "name": "Subjugation Armour", "tier": 70, "ironman": true },
-        { "name": "Ganodermic Armour", "tier": 75, "ironman": false },
+        { "name": "Ganodermic Armour", "tier": 75, "ironman": true },
         { "name": "Virtus Armour", "tier": 80, "ironman": false },
-        { "name": "Tectonic Armour / Cryptbloom Armour", "tier": 90, "ironman": true },
-        { "name": "Elite Tectonic Armour", "tier": 92, "ironman": false },
+        { "name": "Tectonic Armour", "tier": 90, "ironman": true },
+        { "name": "Cryptbloom Armour", "tier": 90, "ironman": false },
+        { "name": "Elite Tectonic Armour", "tier": 92, "ironman": true },
         { "name": "Tumeken's Resplendence", "tier": 95, "ironman": false },
-        { "name": "Masterwork Magic Armour", "tier": 99, "ironman": false, "note": "Less damage than T95, but high HP and Defence" }
+        {
+          "name": "Masterwork Magic Armour",
+          "tier": 99,
+          "ironman": false,
+          "note": "Less damage than T95, but high HP and Defence"
+        }
       ]
     }
   },
@@ -176,38 +313,52 @@
         { "name": "Death Guard + Skull Lantern", "tier": 70, "ironman": true },
         { "name": "Death Guard + Skull Lantern", "tier": 80, "ironman": true },
         { "name": "Death Guard + Skull Lantern", "tier": 90, "ironman": true },
-        { "name": "Omni Guard + Soulbound Lantern", "tier": 95, "ironman": true }
+        {
+          "name": "Omni Guard + Soulbound Lantern",
+          "tier": 95,
+          "ironman": true
+        }
       ],
       "armour": [
         { "name": "Deathwarden Armour", "tier": 1, "ironman": true },
         { "name": "Deathwarden Armour", "tier": 20, "ironman": true },
         { "name": "Deathwarden Armour", "tier": 40, "ironman": true },
         { "name": "Deathwarden Armour", "tier": 60, "ironman": true },
-        { "name": "Deathwarden Armour / Deathdealer Armour", "tier": 70, "ironman": true },
-        { "name": "Deathwarden Armour / Deathdealer Armour", "tier": 80, "ironman": true },
-        { "name": "Deathwarden Armour / Deathdealer Armour", "tier": 90, "ironman": true },
+        { "name": "Deathwarden Armour", "tier": 70, "ironman": true },
+        { "name": "Deathdealer Armour", "tier": 70, "ironman": false },
+        { "name": "Deathwarden Armour", "tier": 80, "ironman": true },
+        { "name": "Deathdealer Armour", "tier": 80, "ironman": false },
+        { "name": "Deathwarden Armour", "tier": 90, "ironman": true },
+        { "name": "Deathdealer Armour", "tier": 90, "ironman": false },
         { "name": "First Necromancer Set", "tier": 95, "ironman": true }
       ]
     },
     "pvm": {
       "weapons": [
         { "name": "Death Guard + Skull Lantern", "tier": 1, "ironman": true },
-        { "name": "Soulbound Death Guard + Soulbound Skull Lantern", "tier": 20, "ironman": true },
-        { "name": "Greater Death Guard + Greater Skull Lantern", "tier": 40, "ironman": true },
-        { "name": "Superior Death Guard + Superior Skull Lantern", "tier": 60, "ironman": true },
-        { "name": "Deathdealer Guard + Deathdealer Lantern", "tier": 70, "ironman": true },
-        { "name": "Deathwarden Guard + Deathwarden Lantern", "tier": 80, "ironman": true },
-        { "name": "Grave Guard + Grave Lantern", "tier": 90, "ironman": true },
-        { "name": "Omni Guard + Soulbound Lantern", "tier": 95, "ironman": true }
+        { "name": "Death Guard + Skull Lantern", "tier": 20, "ironman": true },
+        { "name": "Death Guard + Skull Lantern", "tier": 40, "ironman": true },
+        { "name": "Death Guard + Skull Lantern", "tier": 60, "ironman": true },
+        { "name": "Death Guard + Skull Lantern", "tier": 70, "ironman": true },
+        { "name": "Death Guard + Skull Lantern", "tier": 80, "ironman": true },
+        { "name": "Death Guard + Skull Lantern", "tier": 90, "ironman": true },
+        {
+          "name": "Omni Guard + Soulbound Lantern",
+          "tier": 95,
+          "ironman": true
+        }
       ],
       "armour": [
         { "name": "Deathwarden Armour", "tier": 1, "ironman": true },
         { "name": "Deathwarden Armour", "tier": 20, "ironman": true },
         { "name": "Deathwarden Armour", "tier": 40, "ironman": true },
         { "name": "Deathwarden Armour", "tier": 60, "ironman": true },
-        { "name": "Deathdealer Armour", "tier": 70, "ironman": true },
+        { "name": "Deathwarden Armour", "tier": 70, "ironman": true },
+        { "name": "Deathdealer Armour", "tier": 70, "ironman": false },
         { "name": "Deathwarden Armour", "tier": 80, "ironman": true },
-        { "name": "Deathwarden Armour / Deathdealer Armour", "tier": 90, "ironman": true },
+        { "name": "Deathdealer Armour", "tier": 80, "ironman": false },
+        { "name": "Deathwarden Armour", "tier": 90, "ironman": true },
+        { "name": "Deathdealer Armour", "tier": 90, "ironman": false },
         { "name": "First Necromancer Set", "tier": 95, "ironman": true }
       ]
     }
