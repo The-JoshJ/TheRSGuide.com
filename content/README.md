@@ -64,7 +64,7 @@ If you'd like to make changes directly to the content, you can open a pull reque
    git commit -m "A short summary of your changes"
    ```
 
-    > Replace `"A short summary of your changes"` with a brief but specific explanation of what you changed (e.g., `"Fix typo in melee guide"` or `"Add new section on threshold abilities"`). Avoid using the placeholder message of `"add description of your changes"`.
+    > Replace `"A short summary of your changes"` with a brief but specific explanation of what you changed (e.g., `"Fix typo in melee guide"` or `"Add new section on enhanced abilities"`). Avoid using the placeholder message of `"add description of your changes"`.
 6. **Push to your fork**:
    ```bash
    git push origin your-branch-name

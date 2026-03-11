@@ -59,10 +59,10 @@ export const searchKeywords: Record<string, PriorityResult[]> = {
     { url: "/guides/range/basic-abilities", title: "Ranged Basic Abilities", description: "Adrenaline-generating ranged abilities" },
     { url: "/guides/magic/basic-abilities", title: "Magic Basic Abilities", description: "Adrenaline-generating magic abilities" },
   ],
-  "threshold": [
-    { url: "/guides/melee/enhanced-abilities", title: "Melee Enhanced Abilities", description: "Powerful melee threshold abilities" },
-    { url: "/guides/range/enhanced-abilities", title: "Ranged Enhanced Abilities", description: "Powerful ranged threshold abilities" },
-    { url: "/guides/magic/enhanced-abilities", title: "Magic Enhanced Abilities", description: "Powerful magic threshold abilities" },
+  "enhanced": [
+    { url: "/guides/melee/enhanced-abilities", title: "Melee Enhanced Abilities", description: "Powerful melee enhanced abilities" },
+    { url: "/guides/range/enhanced-abilities", title: "Ranged Enhanced Abilities", description: "Powerful ranged enhanced abilities" },
+    { url: "/guides/magic/enhanced-abilities", title: "Magic Enhanced Abilities", description: "Powerful magic enhanced abilities" },
   ],
   "ultimate": [
     { url: "/guides/melee/ultimate-abilities", title: "Melee Ultimate Abilities", description: "Most powerful melee abilities" },

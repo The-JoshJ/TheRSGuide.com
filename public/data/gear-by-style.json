@@ -170,12 +170,12 @@
     "training": {
       "weapons": [
         { "name": "Death Guard + Skull Lantern", "tier": 1, "ironman": true },
-        { "name": "Soulbound Death Guard + Soulbound Skull Lantern", "tier": 20, "ironman": true },
-        { "name": "Greater Death Guard + Greater Skull Lantern", "tier": 40, "ironman": true },
-        { "name": "Superior Death Guard + Superior Skull Lantern", "tier": 60, "ironman": true },
-        { "name": "Deathdealer Guard + Deathdealer Lantern", "tier": 70, "ironman": true },
-        { "name": "Deathwarden Guard + Deathwarden Lantern", "tier": 80, "ironman": true },
-        { "name": "Grave Guard + Grave Lantern", "tier": 90, "ironman": true },
+        { "name": "Death Guard + Skull Lantern", "tier": 20, "ironman": true },
+        { "name": "Death Guard + Skull Lantern", "tier": 40, "ironman": true },
+        { "name": "Death Guard + Skull Lantern", "tier": 60, "ironman": true },
+        { "name": "Death Guard + Skull Lantern", "tier": 70, "ironman": true },
+        { "name": "Death Guard + Skull Lantern", "tier": 80, "ironman": true },
+        { "name": "Death Guard + Skull Lantern", "tier": 90, "ironman": true },
         { "name": "Omni Guard + Soulbound Lantern", "tier": 95, "ironman": true }
       ],
       "armour": [
@@ -183,8 +183,8 @@
         { "name": "Deathwarden Armour", "tier": 20, "ironman": true },
         { "name": "Deathwarden Armour", "tier": 40, "ironman": true },
         { "name": "Deathwarden Armour", "tier": 60, "ironman": true },
-        { "name": "Deathdealer Armour", "tier": 70, "ironman": true },
-        { "name": "Deathwarden Armour", "tier": 80, "ironman": true },
+        { "name": "Deathwarden Armour / Deathdealer Armour", "tier": 70, "ironman": true },
+        { "name": "Deathwarden Armour / Deathdealer Armour", "tier": 80, "ironman": true },
         { "name": "Deathwarden Armour / Deathdealer Armour", "tier": 90, "ironman": true },
         { "name": "First Necromancer Set", "tier": 95, "ironman": true }
       ]
