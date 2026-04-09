@@ -1,6 +1,14 @@
 "use client";
 
-import React, { createContext, useContext, useState, useCallback, useEffect, ReactNode } from "react";
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useCallback,
+  useEffect,
+  useRef,
+  ReactNode,
+} from "react";
 
 // Types for API responses
 interface SkillLevel {
@@ -51,6 +59,10 @@ const PlayerDataContext = createContext<PlayerDataContextType | undefined>(undef
 
 const STORAGE_KEY = "rs3_player_search";
 
+function normalizeUsername(username: string) {
+  return username.trim();
+}
+
 // Skill name normalization map
 const SKILL_NAME_MAP: { [key: string]: string } = {
   attack: "Attack",
@@ -89,26 +101,44 @@ export function PlayerDataProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [lastSearch, setLastSearch] = useState("");
+  const [hasHydrated, setHasHydrated] = useState(false);
+  const autoLoadedSearchRef = useRef<string | null>(null);
+  const activeRequestIdRef = useRef(0);
+  const activeAbortControllerRef = useRef<AbortController | null>(null);
 
   // Load last search from localStorage on mount
   useEffect(() => {
     if (typeof window !== "undefined") {
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) {
-        setLastSearch(saved);
+        setLastSearch(normalizeUsername(saved));
       }
     }
+    setHasHydrated(true);
   }, []);
 
   const searchPlayer = useCallback(async (username: string) => {
-    if (!username.trim()) return;
+    const normalizedUsername = normalizeUsername(username);
+    if (!normalizedUsername) return;
+
+    activeRequestIdRef.current += 1;
+    const requestId = activeRequestIdRef.current;
+
+    if (activeAbortControllerRef.current) {
+      activeAbortControllerRef.current.abort();
+    }
+
+    const abortController = new AbortController();
+    activeAbortControllerRef.current = abortController;
 
     setLoading(true);
     setError(null);
 
     try {
       // Use internal API route to avoid CORS issues
-      const res = await fetch(`/api/player/${encodeURIComponent(username)}`);
+      const res = await fetch(`/api/player/${encodeURIComponent(normalizedUsername)}`, {
+        signal: abortController.signal,
+      });
 
       if (!res.ok) {
         if (res.status === 404) {
@@ -120,22 +150,48 @@ export function PlayerDataProvider({ children }: { children: ReactNode }) {
 
       const data = await res.json();
 
+      if (requestId !== activeRequestIdRef.current) {
+        return;
+      }
+
       setPlayerData({
-        username,
+        username: normalizedUsername,
         levels: data.levels,
         quests: data.quests,
       });
 
-      setLastSearch(username);
+      setLastSearch(normalizedUsername);
       if (typeof window !== "undefined") {
-        localStorage.setItem(STORAGE_KEY, username);
+        localStorage.setItem(STORAGE_KEY, normalizedUsername);
       }
     } catch (err) {
+      if (abortController.signal.aborted || requestId !== activeRequestIdRef.current) {
+        return;
+      }
+
       setError(err instanceof Error ? err.message : "Unknown error");
       setPlayerData(null);
     } finally {
-      setLoading(false);
+      if (requestId === activeRequestIdRef.current) {
+        setLoading(false);
+      }
     }
+  }, []);
+
+  useEffect(() => {
+    if (!hasHydrated || !lastSearch) return;
+    if (autoLoadedSearchRef.current === lastSearch) return;
+
+    autoLoadedSearchRef.current = lastSearch;
+    void searchPlayer(lastSearch);
+  }, [hasHydrated, lastSearch, searchPlayer]);
+
+  useEffect(() => {
+    return () => {
+      if (activeAbortControllerRef.current) {
+        activeAbortControllerRef.current.abort();
+      }
+    };
   }, []);
 
   const getSkillLevel = useCallback((skillName: string): number | null => {

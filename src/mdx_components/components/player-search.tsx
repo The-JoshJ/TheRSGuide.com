@@ -10,16 +10,14 @@ export const PlayerSearch: React.FC = () => {
   const [debounceTimer, setDebounceTimer] = useState<NodeJS.Timeout | null>(
     null,
   );
+  const [hasInitializedInput, setHasInitializedInput] = useState(false);
 
   useEffect(() => {
-    setInputValue(lastSearch);
-  }, [lastSearch]);
-
-  useEffect(() => {
-    if (lastSearch && !playerData && !loading) {
-      searchPlayer(lastSearch);
+    if (!hasInitializedInput) {
+      setInputValue(lastSearch);
+      setHasInitializedInput(true);
     }
-  }, [lastSearch, playerData, loading, searchPlayer]);
+  }, [hasInitializedInput, lastSearch]);
 
   const debouncedSearch = useCallback(
     (username: string) => {
@@ -61,6 +59,14 @@ export const PlayerSearch: React.FC = () => {
       searchPlayer(inputValue.trim());
     }
   };
+
+  useEffect(() => {
+    return () => {
+      if (debounceTimer) {
+        clearTimeout(debounceTimer);
+      }
+    };
+  }, [debounceTimer]);
 
   const hasStatus = error || (playerData && !loading);
 

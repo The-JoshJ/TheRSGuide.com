@@ -137,6 +137,7 @@ export const QuestRequirements: React.FC<QuestRequirementsProps> = ({
   const [selectedSkill, setSelectedSkill] = useState<{ skill: string; level: number } | null>(null);
   const [inputValue, setInputValue] = useState(lastSearch);
   const [debounceTimer, setDebounceTimer] = useState<NodeJS.Timeout | null>(null);
+  const [hasInitializedInput, setHasInitializedInput] = useState(false);
 
   // Look up quest data from JSON if questName is provided
   const questFromJson = useMemo(() => {
@@ -180,15 +181,11 @@ export const QuestRequirements: React.FC<QuestRequirementsProps> = ({
 
   // Sync input with lastSearch
   useEffect(() => {
-    setInputValue(lastSearch);
-  }, [lastSearch]);
-
-  // Auto-search on mount if we have a saved username
-  useEffect(() => {
-    if (lastSearch && !playerData && !loading) {
-      searchPlayer(lastSearch);
+    if (!hasInitializedInput) {
+      setInputValue(lastSearch);
+      setHasInitializedInput(true);
     }
-  }, [lastSearch, playerData, loading, searchPlayer]);
+  }, [hasInitializedInput, lastSearch]);
 
   const debouncedSearch = useCallback(
     (username: string) => {
@@ -220,6 +217,12 @@ export const QuestRequirements: React.FC<QuestRequirementsProps> = ({
       searchPlayer(inputValue.trim());
     }
   };
+
+  useEffect(() => {
+    return () => {
+      if (debounceTimer) clearTimeout(debounceTimer);
+    };
+  }, [debounceTimer]);
 
   // Recursively resolve all requirements
   const resolved = useMemo(() => {

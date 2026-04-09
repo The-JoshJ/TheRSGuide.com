@@ -234,7 +234,7 @@
       "start": 109,
       "end": 109,
       "desc": "Everlight - Bibliothek Debris",
-      "link": "https://runescape.wiki/w/Bibliothek_debris"
+      "link": "https://runescape.wiki/w/Bibliotheke_debris"
     },
     {
       "start": 110,
@@ -856,39 +856,9 @@
   "herblore": [
     {
       "start": 1,
-      "end": 91,
-      "desc": "Daily Challenges, Jack of Trades Aura, Herby Werby DnD, Weekly Penguins, and Quest EXP Lamps",
-      "link": "https://runescape.wiki/w/Quests/Experience_rewards#Herblore"
-    },
-    {
-      "start": 81,
-      "end": 91,
-      "desc": "Make Saradomin brew",
-      "link": "https://runescape.wiki/w/Saradomin_brew#Creation"
-    },
-    {
-      "start": 84,
-      "end": 88,
-      "desc": "Make Adrenaline potions for future use, these are one of the first untradeable potion unlocks that is very beneficial for PvM.",
-      "link": ""
-    },
-    {
-      "start": 88,
-      "end": 91,
-      "desc": "Make Equal amounts of Extreme Potions, for future use in Overloads. You can boost your herblore level with a god banner (30 minutes per day) or with a Brown Spicy Stew after the Evil Dave's Big Day Out Quest.",
-      "link": "https://runescape.wiki/w/Herblore_training"
-    },
-    {
-      "start": 90,
-      "end": 96,
-      "desc": "Boost to make Overloads with a brown spicy stew after the Evil Dave's Big Day Out Quest - To do this at Level 90 you need to hop worlds every 59 seconds to retain your 6 level boost permanently. This is intensive but very good for exp and unlocking overloads early.",
-      "link": "https://runescape.wiki/w/Herblore_training"
-    },
-    {
-      "start": 96,
       "end": 120,
-      "desc": "As an Ironman, you will now begin making the potions you need. This includes Primal Fruit Pulp, Bombs, Adrenaline boosting Potions, Overloads, Extremes , Super Potions, and Powerbursts.",
-      "link": "https://runescape.wiki/w/Herblore_training"
+      "desc": "Daily Challenges, Herby Werby DnD, Weekly Penguins, and Quest EXP Lamps",
+      "link": "https://runescape.wiki/w/Quests/Experience_rewards#Herblore"
     }
   ],
   "hunter": [
@@ -990,8 +960,14 @@
     },
     {
       "start": 96,
-      "end": 99,
-      "desc": "Trap Ornate Tortles on the Arc - Uncharted Isles.",
+      "end": 98,
+      "desc": "Havenhythe Big Game Hunter (Chinchompa)",
+      "link": ""
+    },
+    {
+      "start": 98,
+      "end": 110,
+      "desc": "Havenhythe Big Game Hunter (Kebbit)",
       "link": ""
     }
   ],
@@ -1017,10 +993,28 @@
   ],
   "magic": [
     {
+      "start": 1,
+      "end": 20,
+      "desc": "Troll Brutes in Burthorpe north caves",
+      "link": ""
+    },
+    {
+      "start": 1,
+      "end": 20,
+      "desc": "Complete the Circus DnD",
+      "link": ""
+    },
+    {
       "start": 20,
       "end": 40,
       "desc": "Ghost Troll Brutes in Um after the Necromancy! Quest.",
       "link": "https://runescape.wiki/w/Ghost_troll_brute"
+    },
+    {
+      "start": 40,
+      "end": 70,
+      "desc": "Ghouls in Canifis with fire spells",
+      "link": "https://runescape.wiki/w/Ghoul"
     },
     {
       "start": 60,
@@ -1105,7 +1099,7 @@
     {
       "start": 80,
       "end": 110,
-      "desc": "Mine banite ore - This can be made more efficient and AFK by combining a perfect juju mining potion (or perfect plus), with the oblivious perk and the use of Stone Spirits to constantly reset the stamina bar to full.",
+      "desc": "Mine banite ore - This can be made more efficient and AFK by combining a perfect juju mining potion (or perfect plus), with the Explosive perk and the use of Stone Spirits to constantly reset the stamina bar to full.",
       "link": "https://runescape.wiki/w/Banite_ore#Mine_locations"
     },
     {
@@ -1117,13 +1111,13 @@
     {
       "start": 90,
       "end": 110,
-      "desc": "Mine light animica or dark animica - This can be made more efficient and AFK by combining a perfect juju mining potion (or perfect plus), with the oblivious perk and the use of Stone Spirits to constantly reset the stamina bar to full.",
+      "desc": "Mine light animica or dark animica - This can be made more efficient and AFK by combining a perfect juju mining potion (or perfect plus), with the Explosive perk and the use of Stone Spirits to constantly reset the stamina bar to full.",
       "link": "https://runescape.wiki/w/Light_animica#Mine_locations"
     },
     {
       "start": 100,
       "end": 110,
-      "desc": "Mine primal ores on Daemonheim - This can be made more efficient and AFK by combining a perfect juju mining potion (or perfect plus), with the oblivious perk and the use of Stone Spirits to constantly reset the stamina bar to full.",
+      "desc": "Mine primal ores on Daemonheim - This can be made more efficient and AFK by combining a perfect juju mining potion (or perfect plus), with the Explosive perk and the use of Stone Spirits to constantly reset the stamina bar to full.",
       "link": "https://runescape.wiki/w/Ores#Primal_ores"
     }
   ],
@@ -1229,10 +1223,28 @@
   ],
   "ranged": [
     {
+      "start": 1,
+      "end": 20,
+      "desc": "Troll Shamans in Burthorpe north caves",
+      "link": ""
+    },
+    {
+      "start": 1,
+      "end": 20,
+      "desc": "Complete the Circus DnD",
+      "link": ""
+    },
+    {
       "start": 20,
       "end": 45,
       "desc": "Ghost Troll Brutes in Um after the Necromancy! Quest",
       "link": "https://runescape.wiki/w/Ghost_troll_brute"
+    },
+    {
+      "start": 44,
+      "end": 70,
+      "desc": "Desert Bandits in Bandit Camp w/ 1 piece of Saradomin or Zamorak equipment.",
+      "link": "https://runescape.wiki/w/Bandit_Camp_(Kharidian_Desert)#Training"
     },
     {
       "start": 55,
