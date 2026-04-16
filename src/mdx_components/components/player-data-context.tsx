@@ -18,6 +18,21 @@ interface SkillLevel {
   rank: number;
 }
 
+interface ApiSkillValue {
+  id: number;
+  level: number;
+  xp: number;
+  rank: number;
+}
+
+interface DirectPlayerDataResponse {
+  name?: string;
+  skillvalues?: ApiSkillValue[];
+  quests?: QuestStatus[];
+  error?: string;
+  loggedIn?: string;
+}
+
 interface PlayerLevels {
   username: string;
   skills: SkillLevel[];
@@ -59,8 +74,56 @@ const PlayerDataContext = createContext<PlayerDataContextType | undefined>(undef
 
 const STORAGE_KEY = "rs3_player_search";
 
+const SKILL_ID_MAP: Record<number, string> = {
+  0: "Attack",
+  1: "Defence",
+  2: "Strength",
+  3: "Constitution",
+  4: "Ranged",
+  5: "Prayer",
+  6: "Magic",
+  7: "Cooking",
+  8: "Woodcutting",
+  9: "Fletching",
+  10: "Fishing",
+  11: "Firemaking",
+  12: "Crafting",
+  13: "Smithing",
+  14: "Mining",
+  15: "Herblore",
+  16: "Agility",
+  17: "Thieving",
+  18: "Slayer",
+  19: "Farming",
+  20: "Runecrafting",
+  21: "Hunter",
+  22: "Construction",
+  23: "Summoning",
+  24: "Dungeoneering",
+  25: "Divination",
+  26: "Invention",
+  27: "Archaeology",
+  28: "Necromancy",
+};
+
 function normalizeUsername(username: string) {
   return username.trim();
+}
+
+function mapDirectApiSkills(skillValues: ApiSkillValue[] = []): SkillLevel[] {
+  return skillValues
+    .map((skill) => {
+      const name = SKILL_ID_MAP[skill.id];
+      if (!name) return null;
+
+      return {
+        name,
+        level: skill.level,
+        xp: skill.xp,
+        rank: skill.rank,
+      };
+    })
+    .filter((skill): skill is SkillLevel => skill !== null);
 }
 
 // Skill name normalization map
@@ -135,34 +198,59 @@ export function PlayerDataProvider({ children }: { children: ReactNode }) {
     setError(null);
 
     try {
-      // Use internal API route to avoid CORS issues
-      const res = await fetch(`/api/player/${encodeURIComponent(normalizedUsername)}`, {
+      const questsUrl = `https://api.thersguide.com/api/v1/player-data?username=${encodeURIComponent(normalizedUsername)}&quests=true`;
+      const questsRes = await fetch(questsUrl, {
         signal: abortController.signal,
       });
 
-      if (!res.ok) {
-        if (res.status === 404) {
+      if (!questsRes.ok) {
+        if (questsRes.status === 404) {
           throw new Error("User not found");
         }
-        const data = await res.json().catch(() => ({}));
+        const data = await questsRes.json().catch(() => ({}));
         throw new Error(data.error || "Failed to fetch player data");
       }
 
-      const data = await res.json();
+      const data: DirectPlayerDataResponse = await questsRes.json();
+
+      if (data.error === "NO_PROFILE") {
+        throw new Error("User not found");
+      }
+
+      if (data.error === "PROFILE_PRIVATE") {
+        throw new Error("Profile is private");
+      }
+
+      if (!data.skillvalues) {
+        throw new Error("Failed to fetch player data");
+      }
 
       if (requestId !== activeRequestIdRef.current) {
         return;
       }
 
+      const resolvedUsername = data.name || normalizedUsername;
+
       setPlayerData({
-        username: normalizedUsername,
-        levels: data.levels,
-        quests: data.quests,
+        username: resolvedUsername,
+        levels: {
+          username: resolvedUsername,
+          skills: mapDirectApiSkills(data.skillvalues),
+        },
+        quests: data.quests
+          ? {
+              username: resolvedUsername,
+              quests: data.quests.map((quest) => ({
+                ...quest,
+                status: quest.status.replaceAll("_", " ").replace(/\b\w/g, (char) => char.toUpperCase()),
+              })),
+            }
+          : null,
       });
 
-      setLastSearch(normalizedUsername);
+      setLastSearch(resolvedUsername);
       if (typeof window !== "undefined") {
-        localStorage.setItem(STORAGE_KEY, normalizedUsername);
+        localStorage.setItem(STORAGE_KEY, resolvedUsername);
       }
     } catch (err) {
       if (abortController.signal.aborted || requestId !== activeRequestIdRef.current) {

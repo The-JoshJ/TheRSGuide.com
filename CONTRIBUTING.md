@@ -1,6 +1,6 @@
 # Contributing to The RS Guide
 
-Welcome! This directory contains the MDX content for The RS Guide website, built with [Fumadocs](https://fumadocs.dev/).
+Welcome! This repository contains the MDX content for The RS Guide website, built with [Fumadocs](https://fumadocs.dev/).
 
 > [!TIP]
 > Updates made to the content here will be reflected on the [BETA site](https://beta.thersguide.com), not the [LIVE site](https://thersguide.com).
@@ -12,10 +12,10 @@ Welcome! This directory contains the MDX content for The RS Guide website, built
   - [Creating Issues](#creating-issues)
   - [Opening Pull Requests](#opening-pull-requests)
 - [Documentation](#documentation)
-  - [Understanding MDX](mdx-guide.md)
-  - [JSX Components in MDX](jsx-components.md)
-  - [Meta.json Files](meta-json-guide.md)
-  - [Components Reference](components.md)
+  - [Understanding MDX](content/mdx-guide.md)
+  - [JSX Components in MDX](content/jsx-components.md)
+  - [Meta.json Files](content/meta-json-guide.md)
+  - [Components Reference](content/components.md)
 - [File Structure](#file-structure)
 - [Need Help?](#need-help)
 
@@ -82,10 +82,10 @@ If you'd like to make changes directly to the content, you can open a pull reque
 
 For detailed guides on working with this repository, see the following documentation files:
 
-- **[Understanding MDX](mdx-guide.md)** - Learn about MDX file format, structure, and frontmatter
-- **[JSX Components in MDX](jsx-components.md)** - Understand how to use JSX components in your content
-- **[Meta.json Files](meta-json-guide.md)** - Learn how to manage navigation structure with meta.json files
-- **[Components Reference](components.md)** - Complete reference for available JSX components
+- **[Understanding MDX](content/mdx-guide.md)** - Learn about MDX file format, structure, and frontmatter
+- **[JSX Components in MDX](content/jsx-components.md)** - Understand how to use JSX components in your content
+- **[Meta.json Files](content/meta-json-guide.md)** - Learn how to manage navigation structure with meta.json files
+- **[Components Reference](content/components.md)** - Complete reference for available JSX components
 
 ## File Structure
 

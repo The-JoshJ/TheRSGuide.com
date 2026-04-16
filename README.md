@@ -69,7 +69,7 @@ docker run -p 3000:3000 thersguide
 
 ## Contributing
 
-We welcome contributions! See the [content README](content/README.md) for guidelines on contributing to the guides.
+We welcome contributions! See the [contribution guide](CONTRIBUTING.md) for guidelines on contributing to the guides.
 
 - **Online Editor:** [editor.thersguide.com](https://editor.thersguide.com) - Preview and test MDX content
 - **Discord:** [discord.gg/thersguy](https://discord.gg/thersguy) - Get help and discuss contributions
