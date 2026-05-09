@@ -3,7 +3,6 @@
 A comprehensive guide website for RuneScape players, covering everything from beginner basics to endgame content.
 
 **Live Site:** [thersguide.com](https://thersguide.com)
-**Beta Site:** [beta.thersguide.com](https://beta.thersguide.com)
 
 ## About
 
